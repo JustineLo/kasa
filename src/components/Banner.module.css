@@ -1,0 +1,35 @@
+.banner {
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  height: 111px;
+  border-radius: 10px;
+}
+
+.banner h1 {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 70%;
+  color: white;
+}
+
+.banner img {
+  filter: brightness(0.7);
+}
+
+@media (min-width: 768px) {
+  .banner {
+    height: 223px;
+  }
+
+  .banner h1 {
+    top: 25%;
+    left: 25%;
+    width: fit-content;
+    text-align: center;
+    font-size: 2rem;
+  }
+}
