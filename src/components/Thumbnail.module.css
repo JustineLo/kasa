@@ -1,0 +1,16 @@
+.thumbnail {
+  height: 255px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.thumbnail h1 {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 70%;
+  color: white;
+}

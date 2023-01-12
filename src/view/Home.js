@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Banner from "../components/Banner";
 import banner from "../assets/homeBanner.png";
+import logements from "./../logements.json";
+import Thumbnail from "../components/Thumbnail";
 
 const Home = () => {
   const bannerText = "Chez vous, partout et ailleurs";
@@ -9,10 +10,14 @@ const Home = () => {
   return (
     <>
       <Banner image={banner} text={bannerText} />
-      <div>
-        <h1>This is the home page</h1>
-        <Link to="logements">Click to view our logements page</Link>
-        <Link to="apropos">Click to view our contact page</Link>
+      <div className="logements-container">
+        {logements.map((logement) => (
+          <Thumbnail
+            key={logement.id}
+            image={logement.cover}
+            title={logement.title}
+          />
+        ))}
       </div>
     </>
   );

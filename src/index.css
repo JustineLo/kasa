@@ -16,6 +16,15 @@ code {
     monospace;
 }
 
+.logements-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+  margin: 22px auto;
+}
+
 @media (min-width: 768px) {
   body {
     margin: 0 4rem;
