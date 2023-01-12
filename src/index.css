@@ -34,7 +34,7 @@ code {
   .logements-container {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
     padding: 3%;
     background-color: var(--grey);
     border-radius: 25px;
