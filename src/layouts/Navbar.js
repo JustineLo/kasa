@@ -12,8 +12,8 @@ const Navbar = () => {
             <Logo />
           </Link>
         </div>
-        <div className="navbar__links">
-          <Link to="/logements">Logements</Link>
+        <div className={styles.links}>
+          <Link to="/">Accueil</Link>
           <Link to="/apropos">A propos</Link>
         </div>
       </div>
