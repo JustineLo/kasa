@@ -15,3 +15,7 @@ a {
   display: flex;
   gap: 10px;
 }
+
+.active {
+  text-decoration: underline;
+}

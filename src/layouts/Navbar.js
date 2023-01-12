@@ -1,9 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { ReactComponent as Logo } from "../assets/kasaLogo.svg";
 
 const Navbar = () => {
+  const location = useLocation();
+
   return (
     <>
       <div className={styles.navbar}>
@@ -13,8 +15,18 @@ const Navbar = () => {
           </Link>
         </div>
         <div className={styles.links}>
-          <Link to="/">Accueil</Link>
-          <Link to="/apropos">A propos</Link>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
+            Accueil
+          </NavLink>
+          <NavLink
+            to="/apropos"
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
+            A propos
+          </NavLink>
         </div>
       </div>
     </>
