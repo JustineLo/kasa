@@ -1,5 +1,6 @@
 :root {
   --primary: #ff6060;
+  --grey: #f6f6f6;
 }
 
 body {
@@ -28,6 +29,15 @@ code {
 @media (min-width: 768px) {
   body {
     margin: 0 4rem;
+  }
+
+  .logements-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3%;
+    background-color: var(--grey);
+    border-radius: 25px;
   }
 }
 

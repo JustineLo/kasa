@@ -14,3 +14,10 @@
   width: 70%;
   color: white;
 }
+
+@media (min-width: 768px) {
+  .thumbnail {
+    height: 340px;
+    width: 340px;
+  }
+}
