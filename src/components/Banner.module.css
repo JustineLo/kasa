@@ -25,7 +25,8 @@
   color: white;
 }
 
-.carousel {
+.carousel,
+.apropos {
   height: 255px;
 }
 

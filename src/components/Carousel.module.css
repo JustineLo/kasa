@@ -1,6 +1,6 @@
 .carousel {
   position: relative;
-  margin: 50px 0;
+  width: 100%;
 }
 
 .carousel button {

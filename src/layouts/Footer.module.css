@@ -11,10 +11,6 @@ footer {
   font-size: 12px;
 }
 
-footer p {
-  margin: 0;
-}
-
 @media (min-width: 768px) {
   footer p {
     font-size: 24px;

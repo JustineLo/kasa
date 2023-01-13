@@ -13,6 +13,13 @@ body {
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -47,7 +54,6 @@ code {
 
 .error-page h1 {
   font-size: 96px;
-  margin: 0;
 }
 
 .error-page h2 {

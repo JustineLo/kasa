@@ -7,7 +7,7 @@ import values from "./../apropos.json";
 const Apropos = () => {
   return (
     <>
-      <Banner image={banner} />
+      <Banner image={banner} apropos={true} />
       <div className="apropos-container">
         {values.map((value) => (
           <Collapsible

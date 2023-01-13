@@ -1,13 +1,36 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import Carousel from "../components/Carousel";
+import Tag from "../components/Tag";
+import styles from "./Logements.module.css";
 
 const Logements = ({ state }) => {
   const location = useLocation();
   const logement = location.state.logement;
+
   return (
     <>
-      <Carousel pictures={logement.pictures} />
+      <section className={styles.logement}>
+        <Carousel pictures={logement.pictures} />
+        <div className={styles.header}>
+          <div className={styles.headerLeftSide}>
+            <h1> {logement.title} </h1>
+            <h2> {logement.location} </h2>
+            <div className={styles.tagsContainer}>
+              {logement.tags.map((tag) => (
+                <Tag text={tag} />
+              ))}
+            </div>
+          </div>
+          <div className={styles.headerRightSide}>
+            <div className={styles.host}>
+              <p>{logement.host.name} </p>
+              <img src={logement.host.picture} />{" "}
+            </div>
+            {/* stars */}
+          </div>
+        </div>
+      </section>
     </>
   );
 };
