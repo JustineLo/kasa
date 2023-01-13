@@ -26,6 +26,30 @@ code {
   margin: 22px auto;
 }
 
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary);
+}
+
+.error-page h1 {
+  font-size: 288px;
+  margin: 0;
+}
+
+.error-page h2 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.error-page a {
+  margin: 10%;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
 @media (min-width: 768px) {
   .logements-container {
     flex-direction: row;
