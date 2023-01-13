@@ -1,8 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import styles from "./Footer.module.css";
+import { ReactComponent as Logo } from "../assets/footerLogo.svg";
 
 const Footer = () => {
-  return <></>;
+  return (
+    <footer className={styles.footer}>
+      <Logo />
+    </footer>
+  );
 };
 
 export default Footer;

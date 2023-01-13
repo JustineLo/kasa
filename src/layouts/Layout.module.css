@@ -1,0 +1,15 @@
+.layout {
+  margin: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    margin: 0 4rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .layout {
+    margin: 0 20rem;
+  }
+}
