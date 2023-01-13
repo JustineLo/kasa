@@ -60,7 +60,20 @@
   height: 32px;
 }
 
+.logement li {
+  list-style: none;
+}
+
+.collapsibles {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 @media (min-width: 768px) {
+  .logement {
+    margin: 20px 0;
+  }
   .header {
     flex-direction: row;
     justify-content: space-between;
@@ -76,5 +89,12 @@
   .host img {
     width: 64px;
     height: 64px;
+  }
+
+  .collapsibles {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 70px;
   }
 }
