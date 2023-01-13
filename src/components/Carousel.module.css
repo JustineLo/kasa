@@ -27,6 +27,15 @@ button img {
   object-fit: cover;
 }
 
+.carousel p {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+}
+
 @media (min-width: 768px) {
   .carousel button {
     top: 40%;

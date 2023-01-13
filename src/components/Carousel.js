@@ -6,17 +6,18 @@ import chevronLeft from "../assets/chevronLeft.svg";
 
 const Carousel = ({ pictures }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const nbPictures = pictures.length;
 
   const handlePrevious = () => {
     if (currentIndex === 0) {
-      setCurrentIndex(pictures.length - 1);
+      setCurrentIndex(nbPictures - 1);
     } else {
       setCurrentIndex(currentIndex - 1);
     }
   };
 
   const handleNext = () => {
-    if (currentIndex === pictures.length - 1) {
+    if (currentIndex === nbPictures - 1) {
       setCurrentIndex(0);
     } else {
       setCurrentIndex(currentIndex + 1);
@@ -33,6 +34,9 @@ const Carousel = ({ pictures }) => {
         <button className={styles.chevronright} onClick={handleNext}>
           <img src={chevronRight} alt="chevron right" />
         </button>
+        <p>
+          {currentIndex + 1}/{nbPictures}
+        </p>
       </div>
     </>
   );

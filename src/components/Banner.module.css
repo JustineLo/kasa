@@ -29,6 +29,10 @@
   height: 255px;
 }
 
+.carousel img {
+  filter: brightness(1);
+}
+
 @media (min-width: 768px) {
   .banner {
     height: 223px;
