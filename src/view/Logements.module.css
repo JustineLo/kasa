@@ -34,6 +34,12 @@
   margin-top: 3px;
 }
 
+.headerRightSide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .host {
   display: flex;
   gap: 10px;

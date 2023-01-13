@@ -11,6 +11,8 @@ const Tag = ({ text }) => {
           width: "fit-content",
           padding: "1% 22px",
           fontSize: "0.8rem",
+          height: "24px",
+          textOverflow: "ellipsis",
         }}
       >
         <p>{text}</p>
