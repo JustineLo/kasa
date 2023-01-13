@@ -10,6 +10,9 @@ const Collapsible = ({ title, description }) => {
           <h1>{title}</h1>
           <img src={chevronDown} alt="chevron down" />
         </div>
+        <div className={styles.description}>
+          <p>{description}</p>
+        </div>
       </button>
     </>
   );
