@@ -5,6 +5,7 @@
   height: 111px;
   border-radius: 10px;
   object-fit: cover;
+  position: relative;
 }
 
 .banner img {
@@ -24,6 +25,10 @@
   color: white;
 }
 
+.carousel {
+  height: 255px;
+}
+
 @media (min-width: 768px) {
   .banner {
     height: 223px;
@@ -35,5 +40,9 @@
     width: fit-content;
     text-align: center;
     font-size: 2rem;
+  }
+
+  .carousel {
+    height: 415px;
   }
 }
