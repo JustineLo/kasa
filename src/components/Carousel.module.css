@@ -29,6 +29,7 @@ button img {
 
 @media (min-width: 768px) {
   .carousel button {
-    width: 5rem;
+    top: 40%;
+    width: 6rem;
   }
 }
