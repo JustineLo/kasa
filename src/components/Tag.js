@@ -9,9 +9,9 @@ const Tag = ({ text }) => {
           color: "white",
           borderRadius: "5px",
           width: "fit-content",
-          padding: "1% 22px",
+          padding: "5px 22px",
           fontSize: "0.8rem",
-          height: "24px",
+          height: "1rem",
           textOverflow: "ellipsis",
         }}
       >
