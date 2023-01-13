@@ -32,7 +32,8 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 31px;
+  margin: 31px 0;
+  gap: 33px;
 }
 
 .error-page {

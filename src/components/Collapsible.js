@@ -5,12 +5,12 @@ import chevronDown from "../assets/chevronDown.svg";
 const Collapsible = ({ title, description }) => {
   return (
     <>
-      <div className={styles.collapsible}>
+      <button className={styles.collapsible}>
         <div className={styles.header}>
           <h1>{title}</h1>
           <img src={chevronDown} alt="chevron down" />
         </div>
-      </div>
+      </button>
     </>
   );
 };
