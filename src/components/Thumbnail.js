@@ -1,13 +1,21 @@
 import React from "react";
 import styles from "./Thumbnail.module.css";
+import { useNavigate } from "react-router-dom";
 
-const Thumbnail = ({ image, title }) => {
+const Thumbnail = ({ logement }) => {
+  const navigate = useNavigate();
+
   return (
     <>
-      <div className={styles.thumbnail}>
-        <img src={image} alt={title} />
-        <h1>{title}</h1>
-      </div>
+      <button
+        className={styles.thumbnail}
+        onClick={() =>
+          navigate("/logements", { state: { logement: logement } })
+        }
+      >
+        <img src={logement.cover} alt={logement.title} />
+        <h1>{logement.title}</h1>
+      </button>
     </>
   );
 };

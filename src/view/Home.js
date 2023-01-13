@@ -12,11 +12,7 @@ const Home = () => {
       <Banner image={banner} text={bannerText} />
       <div className="logements-container">
         {logements.map((logement) => (
-          <Thumbnail
-            key={logement.id}
-            image={logement.cover}
-            title={logement.title}
-          />
+          <Thumbnail key={logement.id} logement={logement} />
         ))}
       </div>
     </>
