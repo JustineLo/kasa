@@ -1,5 +1,5 @@
-import React from "react";
-import { useLocation, useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import Collapsible from "../components/Collapsible";
 import Rating from "../components/Rating";
@@ -9,19 +9,25 @@ import logements from "./../logements.json";
 
 const Logements = () => {
   const {id} = useParams()
-  console.log(id);
-  let logement = {};
+  const navigate = useNavigate();
+  let logement =  logements.filter((logement) => logement.id === id)[0];
   let equipments = [];
-  if (id) {
-    logement = logements.filter((logement) => logement.id === id)[0];
+
+  useEffect(() => {
+    if (logement === undefined) {
+      navigate("/404");
+    }
+  }, [logement, navigate]);
+
+  if (logement !== undefined) {
     equipments = logement.equipments.map((equipment, index) => (
       <li key={index}>{equipment}</li>
     ));
-  }
+  } 
 
   return (
     <>
-      {id ? (
+      {logement && (
         <section className={styles.logement}>
           {/* Carousel */}
           <Carousel pictures={logement.pictures} />
@@ -59,8 +65,6 @@ const Logements = () => {
             </Collapsible>
           </div>
         </section>
-      ) : (
-        <h1>Veuillez sélectionner un logement</h1>
       )}
     </>
   );

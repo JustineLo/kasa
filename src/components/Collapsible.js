@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./Collapsible.module.css";
 import chevronDown from "../assets/chevronDown.svg";
 
-const Collapsible = ({ title, description }) => {
+const Collapsible = ({ title, description, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -20,7 +20,7 @@ const Collapsible = ({ title, description }) => {
           className={styles.description}
           style={{ display: isOpen ? "block" : "none" }}
         >
-          <p>{description}</p>
+          <p>{children}</p>
         </div>
       </button>
     </>
