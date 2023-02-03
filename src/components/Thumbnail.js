@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Thumbnail.module.css";
 import { useNavigate } from "react-router-dom";
 
-const Thumbnail = ({ logement }) => {
+const Thumbnail = ({ id, cover, title }) => {
   const navigate = useNavigate();
 
   return (
@@ -10,11 +10,10 @@ const Thumbnail = ({ logement }) => {
       <button
         className={styles.thumbnail}
         onClick={() =>
-          navigate("/logements", { state: { logement: logement } })
-        }
+          navigate("/logements/" + id)}
       >
-        <img src={logement.cover} alt={logement.title} />
-        <h1>{logement.title}</h1>
+        <img src={cover} alt={title} />
+        <h1>{title}</h1>
       </button>
     </>
   );

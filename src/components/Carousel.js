@@ -12,7 +12,7 @@ const Carousel = ({ pictures }) => {
     if (currentIndex === 0) {
       setCurrentIndex(nbPictures - 1);
     } else {
-      setCurrentIndex(currentIndex - 1);
+      setCurrentIndex((prevState) => prevState - 1);
     }
   };
 
@@ -20,7 +20,7 @@ const Carousel = ({ pictures }) => {
     if (currentIndex === nbPictures - 1) {
       setCurrentIndex(0);
     } else {
-      setCurrentIndex(currentIndex + 1);
+      setCurrentIndex((prevState) => prevState + 1);
     }
   };
 

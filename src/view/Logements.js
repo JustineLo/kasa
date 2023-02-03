@@ -1,17 +1,19 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import Collapsible from "../components/Collapsible";
 import Rating from "../components/Rating";
 import Tag from "../components/Tag";
 import styles from "./Logements.module.css";
+import logements from "./../logements.json";
 
 const Logements = () => {
-  const location = useLocation();
+  const {id} = useParams()
+  console.log(id);
   let logement = {};
   let equipments = [];
-  if (location.state) {
-    logement = location.state.logement;
+  if (id) {
+    logement = logements.filter((logement) => logement.id === id)[0];
     equipments = logement.equipments.map((equipment, index) => (
       <li key={index}>{equipment}</li>
     ));
@@ -19,7 +21,7 @@ const Logements = () => {
 
   return (
     <>
-      {location.state ? (
+      {id ? (
         <section className={styles.logement}>
           {/* Carousel */}
           <Carousel pictures={logement.pictures} />
@@ -39,7 +41,7 @@ const Logements = () => {
               <Rating rating={logement.rating} />
               <div className={styles.host}>
                 <p>{logement.host.name}</p>
-                <img src={logement.host.picture} />
+                <img src={logement.host.picture} alt="logement"/>
               </div>
             </div>
           </div>
@@ -49,8 +51,12 @@ const Logements = () => {
             <Collapsible
               title="Description"
               description={logement.description}
-            />
-            <Collapsible title="Équipements" description={equipments} />
+            >
+              {logement.description}
+            </Collapsible>
+            <Collapsible title="Équipements" description={equipments}>
+              {equipments}
+            </Collapsible>
           </div>
         </section>
       ) : (
