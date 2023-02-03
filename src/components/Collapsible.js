@@ -20,7 +20,7 @@ const Collapsible = ({ title, description, children }) => {
           className={styles.description}
           style={{ display: isOpen ? "block" : "none" }}
         >
-          <p>{children}</p>
+          {children}
         </div>
       </button>
     </>

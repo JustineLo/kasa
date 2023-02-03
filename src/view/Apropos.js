@@ -13,8 +13,9 @@ const Apropos = () => {
           <Collapsible
             key={value.id}
             title={value.title}
-            description={value.description}
-          />
+          >
+            <p>{value.description}</p>
+          </Collapsible>
         ))}
       </div>
     </>

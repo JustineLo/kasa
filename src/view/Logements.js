@@ -56,12 +56,11 @@ const Logements = () => {
           <div className={styles.collapsibles}>
             <Collapsible
               title="Description"
-              description={logement.description}
             >
-              {logement.description}
+              <p>{logement.description}</p>
             </Collapsible>
-            <Collapsible title="Équipements" description={equipments}>
-              {equipments}
+            <Collapsible title="Équipements">
+             <ul>{equipments}</ul> 
             </Collapsible>
           </div>
         </section>
