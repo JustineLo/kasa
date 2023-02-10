@@ -16,6 +16,8 @@
   align-items: center;
   padding: 0 30px;
   border-radius: 5px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .header h1 {
@@ -39,6 +41,8 @@
   z-index: -1;
   padding: 2%;
   text-align: start;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
