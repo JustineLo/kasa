@@ -1,20 +1,10 @@
 import React from "react";
+import styles from "./Tag.module.css";
 
 const Tag = ({ text }) => {
   return (
     <>
-      <div
-        style={{
-          backgroundColor: "var(--primary)",
-          color: "white",
-          borderRadius: "5px",
-          width: "fit-content",
-          padding: "5px 22px",
-          fontSize: "0.8rem",
-          height: "1rem",
-          textOverflow: "ellipsis",
-        }}
-      >
+      <div className={styles.tag}>
         <p>{text}</p>
       </div>
     </>
