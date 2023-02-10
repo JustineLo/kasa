@@ -9,6 +9,7 @@
 a {
   color: var(--primary);
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .links {
@@ -28,5 +29,9 @@ a {
   .links {
     font-size: 1.2rem;
     gap: 50px;
+  }
+
+  a {
+    text-transform: none;
   }
 }
