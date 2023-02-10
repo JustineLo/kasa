@@ -22,12 +22,12 @@
 }
 
 .logement h1 {
-  font-size: 1.3rem;
+  font-size: 18px;
   font-weight: 500;
 }
 
 .logement h2 {
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -52,6 +52,7 @@
 
 .host p {
   text-align: end;
+  font-size: 12px;
 }
 
 .host img {
@@ -80,10 +81,24 @@
     margin-bottom: 26px;
   }
   .logement h1 {
-    font-size: 2rem;
+    font-size: 36px;
   }
+
+  .logement h2 {
+    font-size: 18px;
+  }
+
   .headerRightSide {
     flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+
+  .host {
+    justify-content: end;
+  }
+
+  .host p {
+    font-size: 12px;
   }
 
   .host img {
