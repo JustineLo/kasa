@@ -11,9 +11,9 @@
 
 .thumbnail h1 {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 20px;
-  font-size: 1.5rem;
+  font-size: 18px;
   font-weight: 500;
   width: 70%;
   color: white;
