@@ -39,10 +39,15 @@
   border-radius: 0 0 5px 5px;
   margin-top: -3px;
   z-index: -1;
-  padding: 2%;
   text-align: start;
   box-sizing: border-box;
   width: 100%;
+  font-size: 12px;
+  display: flex;
+  font-size: 12px;
+  padding: 0 7px 0 12px;
+  height: 143px;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -60,7 +65,8 @@
   }
 
   .description {
-    font-size: 1.3rem;
-    padding: 3%;
+    font-size: 18px;
+    padding: 0 12px 0 20px;
+    height: 249px;
   }
 }

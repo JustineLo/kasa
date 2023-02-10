@@ -18,7 +18,7 @@ const Collapsible = ({ title, description, children }) => {
         </div>
         <div
           className={styles.description}
-          style={{ display: isOpen ? "block" : "none" }}
+          style={{ display: isOpen ? "flex" : "none" }}
         >
           {children}
         </div>
