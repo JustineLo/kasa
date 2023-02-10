@@ -21,12 +21,12 @@
   gap: 5px;
 }
 
-.logement h1 {
+.headerLeftSide h1 {
   font-size: 18px;
   font-weight: 500;
 }
 
-.logement h2 {
+.headerLeftSide h2 {
   font-size: 14px;
   font-weight: 500;
 }
@@ -81,11 +81,11 @@
     justify-content: space-between;
     margin-bottom: 26px;
   }
-  .logement h1 {
+  .headerLeftSide h1 {
     font-size: 36px;
   }
 
-  .logement h2 {
+  .headerLeftSide h2 {
     font-size: 18px;
   }
 

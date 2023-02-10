@@ -10,10 +10,7 @@ const Apropos = () => {
       <Banner image={banner} apropos={true} />
       <div className="apropos-container">
         {values.map((value) => (
-          <Collapsible
-            key={value.id}
-            title={value.title}
-          >
+          <Collapsible key={value.id} title={value.title} flexHeight={true}>
             <p>{value.description}</p>
           </Collapsible>
         ))}
