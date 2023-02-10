@@ -9,10 +9,10 @@ const Thumbnail = ({ id, cover, title }) => {
     <>
       <button
         className={styles.thumbnail}
-        onClick={() =>
-          navigate("/logements/" + id)}
+        onClick={() => navigate("/logements/" + id)}
       >
         <img src={cover} alt={title} />
+        <div className={styles.overlay}></div>
         <h1>{title}</h1>
       </button>
     </>
