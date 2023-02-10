@@ -28,12 +28,17 @@ const Carousel = ({ pictures }) => {
     <>
       <div className={styles.carousel}>
         <Banner image={pictures[currentIndex]} carousel={true} />
-        <button className={styles.chevronleft} onClick={handlePrevious}>
-          <img src={chevronLeft} alt="chevron left" />
-        </button>
-        <button className={styles.chevronright} onClick={handleNext}>
-          <img src={chevronRight} alt="chevron right" />
-        </button>
+        {nbPictures > 1 && (
+          <>
+            <button className={styles.chevronleft} onClick={handlePrevious}>
+              <img src={chevronLeft} alt="chevron left" />
+            </button>
+            <button className={styles.chevronright} onClick={handleNext}>
+              <img src={chevronRight} alt="chevron right" />
+            </button>
+          </>
+        )}
+
         <p>
           {currentIndex + 1}/{nbPictures}
         </p>
