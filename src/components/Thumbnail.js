@@ -1,10 +1,8 @@
 import React from "react";
 import styles from "./Thumbnail.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Thumbnail = ({ id, cover, title }) => {
-  const navigate = useNavigate();
-
   return (
     <>
       <Link to={`/logements/${id}`} className={styles.thumbnail}>
