@@ -72,6 +72,10 @@
   margin-bottom: 65px;
 }
 
+ul {
+  padding: 0;
+}
+
 @media (min-width: 768px) {
   .logement {
     margin: 20px 0;
