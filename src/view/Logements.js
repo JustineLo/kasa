@@ -5,12 +5,11 @@ import Collapsible from "../components/Collapsible";
 import Rating from "../components/Rating";
 import Tag from "../components/Tag";
 import styles from "./Logements.module.css";
-import logements from "./../logements.json";
 
-const Logements = () => {
-  const {id} = useParams()
+const Logements = ({ logements }) => {
+  const { id } = useParams();
   const navigate = useNavigate();
-  let logement =  logements.filter((logement) => logement.id === id)[0];
+  let logement = logements.filter((logement) => logement.id === id)[0];
   let equipments = [];
 
   useEffect(() => {
@@ -23,7 +22,7 @@ const Logements = () => {
     equipments = logement.equipments.map((equipment, index) => (
       <li key={index}>{equipment}</li>
     ));
-  } 
+  }
 
   return (
     <>
@@ -47,20 +46,18 @@ const Logements = () => {
               <Rating rating={logement.rating} />
               <div className={styles.host}>
                 <p>{logement.host.name}</p>
-                <img src={logement.host.picture} alt="logement"/>
+                <img src={logement.host.picture} alt="logement" />
               </div>
             </div>
           </div>
 
           {/* Description and equipment */}
           <div className={styles.collapsibles}>
-            <Collapsible
-              title="Description"
-            >
+            <Collapsible title="Description">
               <p>{logement.description}</p>
             </Collapsible>
             <Collapsible title="Équipements">
-             <ul>{equipments}</ul> 
+              <ul>{equipments}</ul>
             </Collapsible>
           </div>
         </section>

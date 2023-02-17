@@ -1,20 +1,17 @@
 import React from "react";
 import styles from "./Thumbnail.module.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Thumbnail = ({ id, cover, title }) => {
   const navigate = useNavigate();
 
   return (
     <>
-      <button
-        className={styles.thumbnail}
-        onClick={() => navigate("/logements/" + id)}
-      >
+      <Link to={`/logements/${id}`} className={styles.thumbnail}>
         <img src={cover} alt={title} />
         <div className={styles.overlay}></div>
         <h1>{title}</h1>
-      </button>
+      </Link>
     </>
   );
 };
