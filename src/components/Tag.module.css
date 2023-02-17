@@ -5,7 +5,8 @@
   width: fit-content;
   font-size: 10px;
   height: 18px;
-  width: 84px;
+  width: auto;
+  padding: 0 1%;
   text-overflow: ellipsis;
   display: flex;
   justify-content: center;
@@ -16,7 +17,7 @@
   .tag {
     font-size: 14px;
     height: 25px;
-    width: 115px;
+    width: auto;
     border-radius: 10px;
   }
 }
