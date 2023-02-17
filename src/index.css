@@ -63,7 +63,8 @@ p {
 @media (min-width: 768px) {
   .logements-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
     justify-content: center;
     justify-items: center;
     gap: 0;
@@ -82,5 +83,17 @@ p {
 
   .error-page a {
     font-size: 18px;
+  }
+}
+
+@media (min-width: 900px) {
+  .logements-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .logements-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

@@ -9,8 +9,8 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1600px) {
   .layout {
-    margin: 0 20rem;
+    margin: 0 10rem;
   }
 }
