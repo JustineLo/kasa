@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import chevronLeft from "../assets/chevronLeft.svg";
+import chevronRight from "../assets/chevronRight.svg";
 import Banner from "./Banner";
 import styles from "./Carousel.module.css";
-import chevronRight from "../assets/chevronRight.svg";
-import chevronLeft from "../assets/chevronLeft.svg";
 
 const Carousel = ({ pictures }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -25,25 +25,22 @@ const Carousel = ({ pictures }) => {
   };
 
   return (
-    <>
-      <div className={styles.carousel}>
-        <Banner image={pictures[currentIndex]} carousel={true} />
-        {nbPictures > 1 && (
-          <>
-            <button className={styles.chevronleft} onClick={handlePrevious}>
-              <img src={chevronLeft} alt="chevron left" />
-            </button>
-            <button className={styles.chevronright} onClick={handleNext}>
-              <img src={chevronRight} alt="chevron right" />
-            </button>
-          </>
-        )}
-
-        <p>
-          {currentIndex + 1}/{nbPictures}
-        </p>
-      </div>
-    </>
+    <div className={styles.carousel}>
+      <Banner image={pictures[currentIndex]} carousel={true} />
+      {nbPictures > 1 && (
+        <>
+          <button className={styles.chevronleft} onClick={handlePrevious}>
+            <img src={chevronLeft} alt="chevron left" />
+          </button>
+          <button className={styles.chevronright} onClick={handleNext}>
+            <img src={chevronRight} alt="chevron right" />
+          </button>
+        </>
+      )}
+      <p>
+        {currentIndex + 1}/{nbPictures}
+      </p>
+    </div>
   );
 };
 
