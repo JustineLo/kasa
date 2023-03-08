@@ -95,7 +95,9 @@ ul {
 
   .headerRightSide {
     flex-direction: column-reverse;
+    min-width: 160px;
     align-items: flex-end;
+    justify-content: flex-end;
   }
 
   .host {

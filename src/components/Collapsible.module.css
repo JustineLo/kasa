@@ -3,7 +3,6 @@
   flex-direction: column;
   width: 100%;
   background: none;
-  outline: none;
   border: none;
   cursor: pointer;
   box-sizing: border-box;
@@ -36,17 +35,18 @@
   background-color: var(--grey);
   color: var(--primary);
   border-radius: 0 0 5px 5px;
-  margin-top: -3px;
   z-index: -1;
   text-align: start;
   box-sizing: border-box;
   width: 100%;
   font-size: 12px;
   display: flex;
-  font-size: 12px;
-  padding: 0 7px 0 12px;
+  padding: 23px 7px 0 12px;
   height: 143px;
-  align-items: center;
+}
+
+ul {
+  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -65,7 +65,7 @@
 
   .description {
     font-size: 18px;
-    padding: 0 12px 0 20px;
+    padding: 40px 12px 0 20px;
     height: 249px;
   }
 }
