@@ -14,7 +14,7 @@ const Collapsible = ({ title, children, flexHeight }) => {
       <button className={styles.collapsible} onClick={handleClick}>
         <div className={styles.header}>
           <h1>{title}</h1>
-          <img src={chevronDown} alt="chevron down" />
+          <img style={{transform: isOpen && `rotate(180deg)`}} src={chevronDown} alt="chevron down" />
         </div>
         <div
           className={styles.description}

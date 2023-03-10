@@ -5,6 +5,7 @@ import Logements from "./view/Logements";
 import ErrorPage from "./view/ErrorPage";
 import Layout from "./layouts/Layout";
 import { useEffect, useState } from "react";
+import ReactRouter from "./ReactRouter";
 
 function App() {
   const [logements, setLogements] = useState([]);
@@ -33,15 +34,7 @@ function App() {
   return (
     <div className="App">
       <Layout>
-        <Routes>
-          <Route path="/" element={<Home logements={logements} />} />
-          <Route
-            path="logements/:id"
-            element={<Logements logements={logements} />}
-          />
-          <Route path="apropos" element={<Apropos />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
+        <ReactRouter logements={logements} />
       </Layout>
     </div>
   );
