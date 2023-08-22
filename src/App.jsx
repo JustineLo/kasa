@@ -1,8 +1,3 @@
-import { Routes, Route } from "react-router-dom";
-import Apropos from "./view/Apropos";
-import Home from "./view/Home";
-import Logements from "./view/Logements";
-import ErrorPage from "./view/ErrorPage";
 import Layout from "./layouts/Layout";
 import { useEffect, useState } from "react";
 import ReactRouter from "./ReactRouter";
