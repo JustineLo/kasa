@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import styles from "./Rating.module.css";
 import pinkStar from "../assets/pinkStar.svg";
 import greyStar from "../assets/greyStar.svg";
